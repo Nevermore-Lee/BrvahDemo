@@ -1,7 +1,9 @@
 package io.nevermore.brvahdemo.activity;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.os.Build;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +11,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
 
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -35,10 +36,10 @@ public class MainActivity extends AppCompatActivity implements INewsView{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         rView = (RecyclerView)findViewById(R.id.rView);
+        swipeRefreshLayout =(SwipeRefreshLayout)findViewById(R.id.sr);
         rView.setLayoutManager(new LinearLayoutManager(this));
         newsPresenter = new NewsPresenter(this);
         newsPresenter.loadNews();
-
     }
 
     /**
@@ -46,6 +47,13 @@ public class MainActivity extends AppCompatActivity implements INewsView{
      */
 
     private void setListeners() {
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                newsPresenter.loadNews();
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
         quickAdapter.setOnRecyclerViewItemClickListener(new BaseQuickAdapter.OnRecyclerViewItemClickListener() {
 
             @Override

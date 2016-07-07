@@ -1,16 +1,15 @@
-package io.nevermore.brvahdemo;
+package io.nevermore.brvahdemo.activity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
 import java.util.List;
 
-import io.nevermore.brvahdemo.activity.MainActivity;
+import io.nevermore.brvahdemo.R;
 import io.nevermore.brvahdemo.entity.News;
 import io.nevermore.brvahdemo.presenter.Imp.NewsPresenter;
 import io.nevermore.brvahdemo.view.INewsView;

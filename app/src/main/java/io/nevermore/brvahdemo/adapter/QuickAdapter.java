@@ -3,6 +3,7 @@ package io.nevermore.brvahdemo.adapter;
 
 import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.widget.ImageView;
 
 import com.chad.library.adapter.base.BaseViewHolder;
