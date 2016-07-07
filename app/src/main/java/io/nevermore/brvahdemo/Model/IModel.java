@@ -1,10 +1,10 @@
-package io.nevermore.brvahdemo.Model;
+package io.nevermore.brvahdemo.model;
 
 import android.graphics.Bitmap;
 
 import java.util.List;
 
-import io.nevermore.brvahdemo.News;
+import io.nevermore.brvahdemo.entity.News;
 
 /**
  * Created by Lee on 2016/7/5.

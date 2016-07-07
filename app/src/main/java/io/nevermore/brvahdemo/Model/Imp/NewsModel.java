@@ -1,10 +1,9 @@
-package io.nevermore.brvahdemo.Model.Imp;
+package io.nevermore.brvahdemo.model.Imp;
 
 import android.graphics.Bitmap;
 import android.util.Log;
 import android.widget.ImageView;
 
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -19,12 +18,11 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.nevermore.brvahdemo.App.MyApplication;
-import io.nevermore.brvahdemo.Constants;
-import io.nevermore.brvahdemo.Model.IModel;
-import io.nevermore.brvahdemo.Model.INewsModel;
-import io.nevermore.brvahdemo.News;
-import io.nevermore.brvahdemo.Util.JsonParser;
+import io.nevermore.brvahdemo.app.MyApplication;
+import io.nevermore.brvahdemo.entity.Constants;
+import io.nevermore.brvahdemo.model.INewsModel;
+import io.nevermore.brvahdemo.entity.News;
+import io.nevermore.brvahdemo.util.JsonParser;
 
 /**
  * Created by Lee on 2016/7/5.
@@ -103,7 +101,7 @@ public class NewsModel implements INewsModel {
                         callBack.onSuccess(response);
 
                     }
-                }, 480, 800, ImageView.ScaleType.FIT_XY ,Bitmap.Config.RGB_565, new Response.ErrorListener() {
+                }, 1080, 1766, ImageView.ScaleType.FIT_XY ,Bitmap.Config.RGB_565, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Log.i("lee","getStartImage"+error.toString());

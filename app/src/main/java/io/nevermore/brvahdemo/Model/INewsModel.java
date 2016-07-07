@@ -1,4 +1,4 @@
-package io.nevermore.brvahdemo.Model;
+package io.nevermore.brvahdemo.model;
 
 /**
  * Created by Lee on 2016/7/5.

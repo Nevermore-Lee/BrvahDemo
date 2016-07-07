@@ -1,4 +1,4 @@
-package io.nevermore.brvahdemo.App;
+package io.nevermore.brvahdemo.app;
 
 import android.app.Application;
 

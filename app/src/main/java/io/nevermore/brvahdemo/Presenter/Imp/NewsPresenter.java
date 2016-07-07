@@ -1,4 +1,4 @@
-package io.nevermore.brvahdemo.Presenter.Imp;
+package io.nevermore.brvahdemo.presenter.Imp;
 
 import android.graphics.Bitmap;
 import android.util.Log;
@@ -6,13 +6,12 @@ import android.widget.ImageView;
 
 import java.util.List;
 
-import io.nevermore.brvahdemo.Constants;
-import io.nevermore.brvahdemo.Model.IModel;
-import io.nevermore.brvahdemo.Model.INewsModel;
-import io.nevermore.brvahdemo.Model.Imp.NewsModel;
-import io.nevermore.brvahdemo.News;
-import io.nevermore.brvahdemo.Presenter.INewsPresenter;
-import io.nevermore.brvahdemo.View.INewsView;
+import io.nevermore.brvahdemo.model.IModel;
+import io.nevermore.brvahdemo.model.INewsModel;
+import io.nevermore.brvahdemo.model.Imp.NewsModel;
+import io.nevermore.brvahdemo.entity.News;
+import io.nevermore.brvahdemo.presenter.INewsPresenter;
+import io.nevermore.brvahdemo.view.INewsView;
 
 /**
  * Created by Administrator on 2016/7/6.

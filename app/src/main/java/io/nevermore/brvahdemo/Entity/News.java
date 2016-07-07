@@ -1,4 +1,4 @@
-package io.nevermore.brvahdemo;
+package io.nevermore.brvahdemo.entity;
 
 import java.io.Serializable;
 

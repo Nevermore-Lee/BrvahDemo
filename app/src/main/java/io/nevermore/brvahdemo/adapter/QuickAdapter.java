@@ -1,7 +1,8 @@
-package io.nevermore.brvahdemo;
+package io.nevermore.brvahdemo.adapter;
 
 
 import android.graphics.Bitmap;
+import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -9,7 +10,9 @@ import com.chad.library.adapter.base.BaseViewHolder;
 
 import java.util.List;
 
-import io.nevermore.brvahdemo.Presenter.Imp.NewsPresenter;
+import io.nevermore.brvahdemo.R;
+import io.nevermore.brvahdemo.entity.News;
+import io.nevermore.brvahdemo.presenter.Imp.NewsPresenter;
 
 /**
  * Created by Lee on 2016/7/5.

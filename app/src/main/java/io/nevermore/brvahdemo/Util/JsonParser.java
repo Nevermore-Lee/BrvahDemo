@@ -1,4 +1,5 @@
-package io.nevermore.brvahdemo.Util;
+package io.nevermore.brvahdemo.util;
+
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -7,10 +8,10 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.nevermore.brvahdemo.News;
+import io.nevermore.brvahdemo.entity.News;
 
 /**
- * Created by Administrator on 2016/7/5.
+ * Created by Lee on 2016/7/5.
  */
 public class JsonParser {
     public static List<News> parserNewsList(JSONArray array) throws JSONException {
