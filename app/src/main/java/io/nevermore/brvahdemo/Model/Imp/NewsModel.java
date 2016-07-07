@@ -38,17 +38,18 @@ public class NewsModel implements INewsModel {
 
     @Override
     public  void getNews(final CallBack callBack){
-        String url = "http://news-at.zhihu.com/api/4/news/latest";
+        String url = Constants.URL_NEWS_LIST_LATEST;
         StringRequest request = new StringRequest(StringRequest.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
                     JSONObject object = new JSONObject(response);
                     JSONArray array = object.getJSONArray("stories");
+                    String date = object.getString("date");
                     newses = JsonParser.parserNewsList(array);
-                    News news = newses.get(0);
-                    String str = news.getTitle();
-                    Log.i("lee",str);
+                    for (News news:newses) {
+                        news.setDate(date);
+                    }
                     callBack.onSuccess(newses);
                 } catch (JSONException e) {
                     e.printStackTrace();

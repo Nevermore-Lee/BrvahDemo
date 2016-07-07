@@ -9,14 +9,24 @@ public class News implements Serializable {
     private int id;
     private String title;
     private String image;
+    private String date;
 
     public News() {
     }
 
-    public News(int id, String title, String image) {
+    public News(int id, String title, String image,String date) {
         this.id = id;
         this.title = title;
         this.image = image;
+        this.date = date;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public void setId(int id) {

@@ -11,6 +11,7 @@ public class Constants {
 
     public final static String URL_BASE_NEWS = "http://daily.zhihu.com/story/";
 
-    public final static String URL_NEWS_LIST_LATEST = URL_BASE_NEWS + "latest";
+    public final static String URL_NEWS_LIST_LATEST = "http://news-at.zhihu.com/api/4/news/latest";
+    public final static String URL_NEWS_LIST_BEFORE = "http://news-at.zhihu.com/api/4/news/before/";
 
 }
